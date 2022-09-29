@@ -1,0 +1,17 @@
+@use '@angular/material' as mat;
+
+@import "styles/colors";
+
+@include mat.core();
+
+$cvms-primary: mat.define-palette($cvms-primary-palette);
+$cvms-accent: mat.define-palette($cvms-accent-palette);
+
+$cvms-light-theme: mat.define-light-theme($cvms-primary, $cvms-accent);
+
+@include mat.core-theme($cvms-light-theme);
+@include mat.all-component-themes($cvms-light-theme);
+
+mat-icon {
+  color: map-get($cvms-grayscale, 600);
+}

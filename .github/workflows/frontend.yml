@@ -1,0 +1,69 @@
+on:
+  push:
+    paths:
+      - "frontend/**"
+
+name: Frontend
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/frontend_shared
+      - name: npm i
+        working-directory: ./frontend
+        run: npm i
+
+
+  build:
+    name: Build
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/frontend_shared
+      - name: npm run build
+        working-directory: ./frontend
+        run: npm run build:prod
+
+  test:
+    name: Test
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/frontend_shared
+      - name: Cache jestCache
+        uses: actions/cache@v3
+        with:
+          path: ./frontend/jestCache
+          key: ${{ runner.os }}-frontend_jestCache-${{ hashFiles('./frontend/src/app/**') }}-${{ github.ref_name }}
+          restore-keys: |
+            ${{ runner.os }}-frontend_jestCache-${{ hashFiles('./frontend/src/app/**') }}-${{ github.ref_name }}
+      - name: npm run test
+        working-directory: ./frontend
+        run: npm run test
+
+  lint:
+    name: Lint
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/frontend_shared
+      - name: npm run lint:check
+        working-directory: ./frontend
+        run: npm run lint:check
+
+  check_format:
+    name: Check format
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/workflows/frontend_shared
+      - name: npm run format:check
+        working-directory: ./frontend
+        run: npm run format:check

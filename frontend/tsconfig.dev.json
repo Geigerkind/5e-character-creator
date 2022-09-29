@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.app.json",
+  "angularCompilerOptions": {
+    "allowUnusedLabels": true,
+    "noUnusedLocals": false
+  }
+}

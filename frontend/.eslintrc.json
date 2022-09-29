@@ -1,0 +1,106 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "standard",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "prettier"
+      ],
+      "plugins": [
+        "prettier",
+        "unused-imports"
+      ],
+      "rules": {
+        "no-useless-constructor": "off",
+        "quotes": [
+          "error",
+          "double",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "array-element-newline": "off",
+        "array-bracket-newline": "off",
+        "function-call-argument-newline": "off",
+        "function-paren-newline": "off",
+        "object-curly-newline": "off",
+        "newline-after-var": "off",
+        "implicit-arrow-linebreak": "off",
+        "operator-linebreak": "off",
+        "multiline-ternary": "off",
+        "accessor-pairs": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "prettier/prettier": [
+          "error",
+          {
+            "singleQuote": false,
+            "printWidth": 120,
+            "quoteProps": "consistent",
+            "arrowParens": "avoid"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "cvms",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "cvms",
+            "style": "kebab-case"
+          }
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "none"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.spec.ts"
+      ],
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

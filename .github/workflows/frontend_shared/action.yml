@@ -1,0 +1,19 @@
+name: "Setup frontend environment"
+description: "Sets up node and possibly precompiled cache"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.npm
+          ./frontend/node_modules
+        key: ${{ runner.os }}-frontend-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-frontend-${{ hashFiles('**/package-lock.json') }}
+    - name: Node 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16

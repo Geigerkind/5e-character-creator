@@ -1,0 +1,18 @@
+@import 'material-icons/iconfont/material-icons.css';
+@import "@fontsource/roboto/latin.css";
+@import "styles/colors";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background: map-get($cvms-grayscale, 0);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
