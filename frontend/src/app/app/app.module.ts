@@ -9,6 +9,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { InfrastructureModule } from "../infrastructure/infrastructure.module";
+import { DomainModule } from "../domain/domain.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     CommonModule,
     AppRoutingModule,
+    InfrastructureModule,
+    DomainModule,
     SharedModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -27,7 +31,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
       },
     }),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
