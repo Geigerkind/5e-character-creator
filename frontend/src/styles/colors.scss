@@ -1,4 +1,4 @@
-$cvms-primary-palette: (
+$cm-primary-palette: (
   50: #DAE8F3,
   100: #9DC1DF,
   200: #80AED5,
@@ -23,7 +23,7 @@ $cvms-primary-palette: (
   )
 );
 
-$cvms-accent-palette: (
+$cm-accent-palette: (
   50: #FEF2F8,
   100: #F8BFDF,
   200: #F599CB,
@@ -48,7 +48,7 @@ $cvms-accent-palette: (
   )
 );
 
-$cvms-grayscale: (
+$cm-grayscale: (
   0: #FFFFFF,
   50: #FAFAFA,
   100: #F2F2F2,
@@ -65,45 +65,45 @@ $cvms-grayscale: (
 );
 
 :root {
-  --cvms-primary-palette-50: #{map-get($cvms-primary-palette, 50)};
-  --cvms-primary-palette-100: #{map-get($cvms-primary-palette, 100)};
-  --cvms-primary-palette-200: #{map-get($cvms-primary-palette, 200)};
-  --cvms-primary-palette-300: #{map-get($cvms-primary-palette, 300)};
-  --cvms-primary-palette-400: #{map-get($cvms-primary-palette, 400)};
-  --cvms-primary-palette-500: #{map-get($cvms-primary-palette, 500)};
-  --cvms-primary-palette-600: #{map-get($cvms-primary-palette, 600)};
-  --cvms-primary-palette-700: #{map-get($cvms-primary-palette, 700)};
-  --cvms-primary-palette-800: #{map-get($cvms-primary-palette, 800)};
-  --cvms-primary-palette-900: #{map-get($cvms-primary-palette, 900)};
+  --cm-primary-palette-50: #{map-get($cm-primary-palette, 50)};
+  --cm-primary-palette-100: #{map-get($cm-primary-palette, 100)};
+  --cm-primary-palette-200: #{map-get($cm-primary-palette, 200)};
+  --cm-primary-palette-300: #{map-get($cm-primary-palette, 300)};
+  --cm-primary-palette-400: #{map-get($cm-primary-palette, 400)};
+  --cm-primary-palette-500: #{map-get($cm-primary-palette, 500)};
+  --cm-primary-palette-600: #{map-get($cm-primary-palette, 600)};
+  --cm-primary-palette-700: #{map-get($cm-primary-palette, 700)};
+  --cm-primary-palette-800: #{map-get($cm-primary-palette, 800)};
+  --cm-primary-palette-900: #{map-get($cm-primary-palette, 900)};
 
-  --cvms-accent-palette-50: #{map-get($cvms-accent-palette, 50)};
-  --cvms-accent-palette-100: #{map-get($cvms-accent-palette, 100)};
-  --cvms-accent-palette-200: #{map-get($cvms-accent-palette, 200)};
-  --cvms-accent-palette-300: #{map-get($cvms-accent-palette, 300)};
-  --cvms-accent-palette-400: #{map-get($cvms-accent-palette, 400)};
-  --cvms-accent-palette-500: #{map-get($cvms-accent-palette, 500)};
-  --cvms-accent-palette-600: #{map-get($cvms-accent-palette, 600)};
-  --cvms-accent-palette-700: #{map-get($cvms-accent-palette, 700)};
-  --cvms-accent-palette-800: #{map-get($cvms-accent-palette, 800)};
-  --cvms-accent-palette-900: #{map-get($cvms-accent-palette, 900)};
+  --cm-accent-palette-50: #{map-get($cm-accent-palette, 50)};
+  --cm-accent-palette-100: #{map-get($cm-accent-palette, 100)};
+  --cm-accent-palette-200: #{map-get($cm-accent-palette, 200)};
+  --cm-accent-palette-300: #{map-get($cm-accent-palette, 300)};
+  --cm-accent-palette-400: #{map-get($cm-accent-palette, 400)};
+  --cm-accent-palette-500: #{map-get($cm-accent-palette, 500)};
+  --cm-accent-palette-600: #{map-get($cm-accent-palette, 600)};
+  --cm-accent-palette-700: #{map-get($cm-accent-palette, 700)};
+  --cm-accent-palette-800: #{map-get($cm-accent-palette, 800)};
+  --cm-accent-palette-900: #{map-get($cm-accent-palette, 900)};
 
-  --cvms-grayscale-0: #{map-get($cvms-grayscale, 0)};
-  --cvms-grayscale-50: #{map-get($cvms-grayscale, 50)};
-  --cvms-grayscale-100: #{map-get($cvms-grayscale, 100)};
-  --cvms-grayscale-200: #{map-get($cvms-grayscale, 200)};
-  --cvms-grayscale-250: #{map-get($cvms-grayscale, 250)};
-  --cvms-grayscale-300: #{map-get($cvms-grayscale, 300)};
-  --cvms-grayscale-400: #{map-get($cvms-grayscale, 400)};
-  --cvms-grayscale-500: #{map-get($cvms-grayscale, 500)};
-  --cvms-grayscale-600: #{map-get($cvms-grayscale, 600)};
-  --cvms-grayscale-700: #{map-get($cvms-grayscale, 700)};
-  --cvms-grayscale-800: #{map-get($cvms-grayscale, 800)};
-  --cvms-grayscale-900: #{map-get($cvms-grayscale, 900)};
-  --cvms-grayscale-1000: #{map-get($cvms-grayscale, 1000)};
+  --cm-grayscale-0: #{map-get($cm-grayscale, 0)};
+  --cm-grayscale-50: #{map-get($cm-grayscale, 50)};
+  --cm-grayscale-100: #{map-get($cm-grayscale, 100)};
+  --cm-grayscale-200: #{map-get($cm-grayscale, 200)};
+  --cm-grayscale-250: #{map-get($cm-grayscale, 250)};
+  --cm-grayscale-300: #{map-get($cm-grayscale, 300)};
+  --cm-grayscale-400: #{map-get($cm-grayscale, 400)};
+  --cm-grayscale-500: #{map-get($cm-grayscale, 500)};
+  --cm-grayscale-600: #{map-get($cm-grayscale, 600)};
+  --cm-grayscale-700: #{map-get($cm-grayscale, 700)};
+  --cm-grayscale-800: #{map-get($cm-grayscale, 800)};
+  --cm-grayscale-900: #{map-get($cm-grayscale, 900)};
+  --cm-grayscale-1000: #{map-get($cm-grayscale, 1000)};
 }
 
 // Constants
-$text-color: map-get($cvms-grayscale, 800);
-$subtext-color: map-get($cvms-grayscale, 700);
-$color-primary-default: map-get($cvms-primary-palette, 500);
-$color-accent-default: map-get($cvms-accent-palette, 500);
+$text-color: map-get($cm-grayscale, 800);
+$subtext-color: map-get($cm-grayscale, 700);
+$color-primary-default: map-get($cm-primary-palette, 500);
+$color-accent-default: map-get($cm-accent-palette, 500);

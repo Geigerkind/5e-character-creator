@@ -1,6 +1,11 @@
-import { DndClass } from "../value_objects/DndClass";
+import { CharacterClass } from "../value_objects/CharacterClass";
 
-export interface Character {
-  name: string;
-  dndClass: DndClass;
+export class Character {
+  characterClasses: CharacterClass[];
+
+  constructor(private name: string) {}
+
+  getLevel(): number {
+    return this.characterClasses.reduce((acc, it) => acc + it.level, 0);
+  }
 }

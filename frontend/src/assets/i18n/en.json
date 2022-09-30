@@ -1,5 +1,15 @@
 {
   "app": {
       "title": "Character Creator"
+  },
+  "creator": {
+    "step1": {
+      "label": "Choose a name",
+      "form": {
+        "nameLabel": "Character name",
+        "namePlaceholder": "e. g. Herberg the Mighty"
+      }
+    },
+    "nextButtonLabel": "Next"
   }
 }

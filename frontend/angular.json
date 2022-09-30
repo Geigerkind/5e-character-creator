@@ -20,7 +20,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "5ecm",
+      "prefix": "cm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

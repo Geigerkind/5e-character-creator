@@ -4,14 +4,14 @@
 
 @include mat.core();
 
-$cvms-primary: mat.define-palette($cvms-primary-palette);
-$cvms-accent: mat.define-palette($cvms-accent-palette);
+$cm-primary: mat.define-palette($cm-primary-palette);
+$cm-accent: mat.define-palette($cm-accent-palette);
 
-$cvms-light-theme: mat.define-light-theme($cvms-primary, $cvms-accent);
+$cm-light-theme: mat.define-light-theme($cm-primary, $cm-accent);
 
-@include mat.core-theme($cvms-light-theme);
-@include mat.all-component-themes($cvms-light-theme);
+@include mat.core-theme($cm-light-theme);
+@include mat.all-component-themes($cm-light-theme);
 
 mat-icon {
-  color: map-get($cvms-grayscale, 600);
+  color: map-get($cm-grayscale, 600);
 }

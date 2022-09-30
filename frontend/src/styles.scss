@@ -9,7 +9,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background: map-get($cvms-grayscale, 0);
+  background: map-get($cm-grayscale, 0);
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 

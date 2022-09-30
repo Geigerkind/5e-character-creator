@@ -1,0 +1,7 @@
+<form [formGroup]="chooseNameStepFormGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>{{ "creator.step1.form.nameLabel" | translate }}</mat-label>
+    <input matInput [placeholder]="'creator.step1.form.namePlaceholder' | translate" formControlName="name" required>
+  </mat-form-field>
+  <ng-content></ng-content>
+</form>

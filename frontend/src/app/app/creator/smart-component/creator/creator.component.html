@@ -1,0 +1,16 @@
+<mat-stepper [linear]="true">
+  <mat-step
+    [stepControl]="creatorFormGroup.chooseNameStepFormGroup">
+    <ng-template matStepLabel>{{ 'creator.step1.label' | translate }}</ng-template>
+    <cm-choose-name-step
+      [chooseNameStepFormGroup]="creatorFormGroup.chooseNameStepFormGroup">
+      <div>
+        <button mat-button matStepperNext>{{ "creator.nextButtonLabel" | translate }}</button>
+      </div>
+    </cm-choose-name-step>
+  </mat-step>
+  <mat-step [stepControl]="creatorFormGroup.chooseClassStepFormGroup">
+    <ng-template matStepLabel>Test</ng-template>
+    <cm-choose-class-step></cm-choose-class-step>
+  </mat-step>
+</mat-stepper>

@@ -16,15 +16,15 @@ export enum Tone {
 
 export class CustomColors {
   static primary(tone: Tone, transparency: number = 1): string {
-    return CustomColors.getCssColorVariable("--cvms-primary-palette-" + tone.toString(), transparency);
+    return CustomColors.getCssColorVariable("--cm-primary-palette-" + tone.toString(), transparency);
   }
 
   static accent(tone: Tone, transparency: number = 1): string {
-    return CustomColors.getCssColorVariable("--cvms-accent-palette-" + tone.toString(), transparency);
+    return CustomColors.getCssColorVariable("--cm-accent-palette-" + tone.toString(), transparency);
   }
 
   static grayscale(tone: Tone, transparency: number = 1): string {
-    return CustomColors.getCssColorVariable("--cvms-grayscale-" + tone.toString(), transparency);
+    return CustomColors.getCssColorVariable("--cm-grayscale-" + tone.toString(), transparency);
   }
 
   private static getCssColorVariable(variableName: string, transparency: number): string {
